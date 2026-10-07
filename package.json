@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "postinstall": "prisma generate",
+    "vercel-build": "prisma generate && prisma migrate deploy && next build",
     "typecheck": "tsc --noEmit",
     "db:validate": "prisma validate",
     "db:generate": "prisma generate",
