@@ -1,0 +1,572 @@
+/* ============================================================
+   TPAV COMMON INNER PAGE
+============================================================ */
+
+.innerBanner {
+    --tpav-navy: #05294f;
+    --tpav-dark: #031e3a;
+    --tpav-blue: #0b4b82;
+    --tpav-light: #f3f7fc;
+    --tpav-gold: #031e3a;
+    --tpav-text: #52647a;
+
+    position: relative;
+
+    width: 100%;
+    min-height: 205px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+    margin-top: 76px;
+    background:
+        linear-gradient(115deg,
+            #f8fbff 0%,
+            #eef5fd 45%,
+            #f7faff 100%);
+
+    border-top: 1px solid rgba(5, 41, 79, 0.025);
+    border-bottom: 1px solid rgba(5, 41, 79, 0.07);
+
+    isolation: isolate;
+}
+
+
+/* ============================================================
+   CONTAINER
+============================================================ */
+
+.bannerContainer,
+.contentContainer {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* ============================================================
+   BACKGROUND DECORATION
+============================================================ */
+
+.bannerGlowLeft {
+    position: absolute;
+
+    width: 370px;
+    height: 370px;
+
+    left: -150px;
+    top: -220px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(15, 91, 153, 0.12) 0%,
+            rgba(15, 91, 153, 0.04) 46%,
+            transparent 72%);
+
+    pointer-events: none;
+
+    animation: glowFloatLeft 10s ease-in-out infinite;
+}
+
+
+.bannerGlowRight {
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -180px;
+    bottom: -300px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(244, 173, 40, 0.13) 0%,
+            rgba(244, 173, 40, 0.035) 48%,
+            transparent 70%);
+
+    pointer-events: none;
+
+    animation: glowFloatRight 12s ease-in-out infinite;
+}
+
+
+/* subtle legal/premium pattern */
+
+.bannerPattern {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.34;
+
+    background-image:
+        linear-gradient(rgba(6, 48, 87, 0.025) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(6, 48, 87, 0.025) 1px,
+            transparent 1px);
+
+    background-size: 44px 44px;
+
+    mask-image:
+        linear-gradient(90deg,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%);
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   CONTENT
+============================================================ */
+
+.bannerContent {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 0 36px;
+
+    text-align: center;
+
+    animation: bannerFadeIn 0.65s ease forwards;
+}
+
+
+/* ============================================================
+   EYEBROW
+============================================================ */
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 11px;
+
+    color: var(--tpav-gold);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+    line-height: 1;
+
+    text-transform: uppercase;
+}
+
+
+.eyebrowLine {
+    width: 25px;
+    height: 1px;
+
+    display: block;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            var(--tpav-gold));
+}
+
+
+.eyebrowLine:last-child {
+    background:
+        linear-gradient(90deg,
+            var(--tpav-gold),
+            transparent);
+}
+
+
+/* ============================================================
+   HEADING
+============================================================ */
+
+.bannerHeading {
+    position: relative;
+
+    margin: 0 0 17px;
+
+    color: var(--tpav-dark);
+
+    font-size: clamp(28px, 3vw, 38px);
+    line-height: 1.18;
+
+    font-weight: 800;
+
+    letter-spacing: -1.1px;
+
+    text-wrap: balance;
+}
+
+
+.bannerHeading::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -9px;
+
+    width: 28px;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    background: var(--tpav-gold);
+
+    border-radius: 20px;
+}
+
+
+/* ============================================================
+   BREADCRUMB
+============================================================ */
+
+.breadcrumbNav {
+    margin-top: 7px;
+}
+
+
+.breadcrumb {
+    list-style: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin: 0;
+    padding: 7px 13px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border:
+        1px solid rgba(7, 52, 94, 0.08);
+
+    border-radius: 50px;
+
+    box-shadow:
+        0 5px 18px rgba(4, 40, 75, 0.04);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 12px;
+    line-height: 1;
+}
+
+
+.breadcrumb a {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 5px;
+
+    color: var(--tpav-blue);
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.breadcrumb a svg {
+    width: 13px;
+    height: 13px;
+}
+
+
+.breadcrumb a:hover {
+    color: var(--tpav-gold);
+}
+
+
+.breadcrumbSeparator {
+    color: #9caabc;
+}
+
+
+.breadcrumbSeparator svg {
+    width: 12px;
+    height: 12px;
+}
+
+
+.currentPage {
+    color: #708197;
+
+    font-weight: 500;
+}
+
+
+/* ============================================================
+   BOTTOM ACCENT
+============================================================ */
+
+.bottomLine {
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: min(1180px, calc(100% - 40px));
+    height: 1px;
+
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(90deg,
+            transparent 0%,
+            rgba(5, 41, 79, 0.07) 25%,
+            rgba(5, 41, 79, 0.07) 75%,
+            transparent 100%);
+}
+
+
+.bottomLine span {
+    position: absolute;
+
+    left: 50%;
+    top: -1px;
+
+    width: 55px;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            var(--tpav-gold),
+            transparent);
+}
+
+
+/* ============================================================
+   INNER CONTENT SECTION
+============================================================ */
+
+.innerSection {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+}
+
+
+.contentContainer {
+    position: relative;
+}
+
+
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+
+@keyframes bannerFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(12px);
+        filter: blur(2px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+
+@keyframes glowFloatLeft {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(25px, 12px, 0);
+    }
+}
+
+
+@keyframes glowFloatRight {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(-25px, -10px, 0);
+    }
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 991px) {
+    .innerBanner {
+        min-height: 185px;
+    }
+
+    .bannerContent {
+        padding: 34px 0 31px;
+    }
+
+    .bannerHeading {
+        font-size: 31px;
+    }
+
+    .innerSection {
+        padding:
+            42px 0 65px;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 767px) {
+    .innerBanner {
+        min-height: 165px;
+    }
+
+    .bannerContainer,
+    .contentContainer {
+        width: min(100% - 28px,
+                1180px);
+    }
+
+    .bannerContent {
+        padding:
+            29px 0 27px;
+    }
+
+    .eyebrow {
+        margin-bottom: 9px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.8px;
+    }
+
+    .eyebrowLine {
+        width: 19px;
+    }
+
+    .bannerHeading {
+        margin-bottom: 15px;
+
+        font-size: 27px;
+
+        letter-spacing: -0.7px;
+    }
+
+    .breadcrumb {
+        padding: 6px 11px;
+    }
+
+    .breadcrumb li {
+        font-size: 11px;
+    }
+
+    .innerSection {
+        padding:
+            34px 0 55px;
+    }
+
+    .bottomLine {
+        width: calc(100% - 28px);
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 480px) {
+    .innerBanner {
+        min-height: 155px;
+    }
+
+    .bannerContent {
+        padding:
+            25px 0 24px;
+    }
+
+    .bannerHeading {
+        font-size: 25px;
+    }
+
+    .eyebrow {
+        gap: 8px;
+    }
+
+    .breadcrumb {
+        gap: 4px;
+    }
+
+    .bannerGlowLeft {
+        width: 260px;
+        height: 260px;
+
+        left: -140px;
+        top: -160px;
+    }
+
+    .bannerGlowRight {
+        width: 280px;
+        height: 280px;
+
+        right: -150px;
+        bottom: -210px;
+    }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .bannerContent,
+    .bannerGlowLeft,
+    .bannerGlowRight {
+        animation: none;
+    }
+}

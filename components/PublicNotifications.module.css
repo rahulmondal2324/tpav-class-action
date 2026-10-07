@@ -1,0 +1,124 @@
+.region {
+  position: fixed;
+  z-index: 10000;
+  top: 24px;
+  right: 24px;
+  width: min(420px, calc(100vw - 32px));
+  display: grid;
+  gap: 12px;
+  pointer-events: none;
+}
+.toast {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  border-left: 4px solid #437cbb;
+  border-radius: 14px;
+  background: white;
+  color: var(--navy);
+  box-shadow: 0 16px 50px #001c3f26;
+  pointer-events: auto;
+  animation: enter 0.25s ease-out;
+  overflow-wrap: anywhere;
+}
+.toast strong {
+  font-size: 14px;
+}
+.toast p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.toast button {
+  border: 0;
+  background: transparent;
+  color: var(--navy);
+  font-size: 24px;
+  padding: 0 5px;
+  margin-left: auto;
+  line-height: 1;
+}
+.icon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  border-radius: 50%;
+  background: var(--blue);
+  font-weight: 600;
+}
+.success {
+  border-left-color: #267368;
+}
+.error {
+  border-left-color: #ad3c48;
+}
+.error .icon {
+  background: #fce9ec;
+  color: #8c2633;
+}
+.info {
+  border-left-color: #437cbb;
+}
+.dialog {
+  margin: auto;
+  width: min(460px, calc(100vw - 32px));
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  color: var(--navy);
+  box-shadow: 0 25px 100px #001c3f33;
+}
+.dialog::backdrop {
+  background: #001c3f80;
+  backdrop-filter: blur(4px);
+}
+.dialog h2 {
+  font-size: 24px;
+  margin: 14px 0;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+}
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}
+.actions button {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: white;
+  color: var(--navy);
+  padding: 12px 20px;
+}
+.actions button:last-child {
+  background: var(--navy);
+  color: white;
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 600px) {
+  .region {
+    top: 16px;
+    right: 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .toast {
+    animation: none;
+  }
+}

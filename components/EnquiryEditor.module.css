@@ -1,0 +1,29 @@
+.editor {
+  min-width: 0;
+}
+.editor fieldset {
+  display: grid;
+  gap: 12px;
+  border: 0;
+  padding: 0;
+}
+.editor label {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 12px;
+}
+.editor select,
+.editor textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 12px;
+  color: var(--ink);
+  background: white;
+}
+.editor textarea {
+  resize: vertical;
+}
+.editor p {
+  font-size: 12px;
+}
