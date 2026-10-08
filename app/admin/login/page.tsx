@@ -30,7 +30,7 @@ export default function Login() {
             and share the updates that matter.
           </p>
         </div>
-        <small>TPAV Class Action · Administration</small>
+        <small>Class Action Against TPAV · Administration</small>
       </div>
       <section className="login-panel">
         <form

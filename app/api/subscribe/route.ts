@@ -21,7 +21,7 @@ export async function POST(request: Request) {
       status: result.status,
       message:
         result.status === "already_subscribed"
-          ? "You’re already subscribed with this email address. You’ll receive new TPAV Class Action updates as they are published."
+          ? "You’re already subscribed with this email address. You’ll receive new Class Action Against TPAV updates as they are published."
           : "Your confirmation email is on its way. Please check your inbox and spam folder to complete your subscription.",
     });
   } catch (error) {

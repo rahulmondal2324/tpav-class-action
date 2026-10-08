@@ -79,10 +79,10 @@ export async function requestVerification(
   try {
     await sendEmail(
       email,
-      "Confirm your TPAV Class Action subscription",
+      "Confirm your Class Action Against TPAV subscription",
       emailFrame(
         "Confirm your email",
-        "<p>Please confirm that you would like to receive TPAV Class Action news and updates. This link expires in 24 hours. You do not need an account or password.</p>",
+        "<p>Please confirm that you would like to receive Class Action Against TPAV news and updates. This link expires in 24 hours. You do not need an account or password.</p>",
         "Confirm subscription",
         url,
       ),

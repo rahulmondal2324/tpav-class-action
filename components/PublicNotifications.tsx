@@ -142,7 +142,7 @@ export default function PublicNotifications({
           finish(false);
         }}
       >
-        <span className={styles.eyebrow}>TPAV CLASS ACTION</span>
+        <span className={styles.eyebrow}>Class Action Against TPAV</span>
         <h2 id="public-confirm-title">{question?.title}</h2>
         <p id="public-confirm-text">{question?.text}</p>
         <div className={styles.actions}>

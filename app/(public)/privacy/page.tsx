@@ -5,7 +5,7 @@ import styles from "@/components/LegalPage.module.css";
 export const metadata = {
   title: "Privacy Policy",
   description:
-    "Information about how the TPAV Class Action website handles personal information.",
+    "Information about how the Class Action Against TPAV website handles personal information.",
 };
 
 export default function Page() {

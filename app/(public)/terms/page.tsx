@@ -5,7 +5,7 @@ import styles from "@/components/LegalPage.module.css";
 export const metadata = {
   title: "Terms of Service",
   description:
-    "Terms governing access to and use of the TPAV Class Action website.",
+    "Terms governing access to and use of the Class Action Against TPAV website.",
 };
 
 export default function Page() {
@@ -40,7 +40,7 @@ export default function Page() {
 
             <p>
               These Terms of Service explain the conditions that apply when
-              accessing and using the TPAV Class Action website. Please read
+              accessing and using the Class Action Against TPAV website. Please read
               them carefully before relying on information published on this
               website.
             </p>
@@ -69,7 +69,7 @@ export default function Page() {
                   <path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7z" />
                   <path d="m9 12 2 2 4-4" />
                 </svg>
-                TPAV Class Action
+                Class Action Against TPAV
               </span>
             </div>
           </div>

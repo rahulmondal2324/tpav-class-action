@@ -89,7 +89,7 @@ export default function AdminFrame({
             <Menu />
           </button>
           <div>
-            <span className="eyebrow">TPAV CLASS ACTION</span>
+            <span className="eyebrow">CLASS ACTION AGAINST TPAV</span>
             <strong>Website management</strong>
           </div>
           <div className="admin-account">

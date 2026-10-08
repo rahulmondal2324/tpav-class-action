@@ -5,7 +5,7 @@ import { getSettings } from "@/lib/settings";
 export const metadata = {
   title: "Contact Us",
   description:
-    "Contact the TPAV Class Action initiative about updates, the website or your subscription.",
+    "Contact the Class Action Against TPAV initiative about updates, the website or your subscription.",
 };
 export default async function Page() {
   const settings = await getSettings();

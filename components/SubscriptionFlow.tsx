@@ -109,7 +109,7 @@ export default function SubscriptionFlow({
         <p className="subscription-flow-description">
           {isVerify
             ? "Enter your email address below and we’ll help you request a fresh confirmation email."
-            : "For your security, please use the unsubscribe link at the bottom of one of your TPAV Class Action emails."}
+            : "For your security, please use the unsubscribe link at the bottom of one of your Class Action Against TPAV emails."}
         </p>
 
         {isVerify ? (
@@ -125,8 +125,7 @@ export default function SubscriptionFlow({
                 <strong>No account required</strong>
 
                 <p>
-                  You do not need a password or account to receive TPAV Class
-                  Action updates.
+                  You do not need a password or account to receive Class Action Against TPAV updates.
                 </p>
               </div>
             </div>
@@ -163,8 +162,8 @@ export default function SubscriptionFlow({
         <p className="subscription-flow-description">
           {message ||
             (isVerify
-              ? "Your email has been confirmed successfully. You'll now receive TPAV Class Action news and updates."
-              : "You will no longer receive TPAV Class Action update emails.")}
+              ? "Your email has been confirmed successfully. You'll now receive Class Action Against TPAV news and updates."
+              : "You will no longer receive Class Action Against TPAV update emails.")}
         </p>
 
         <Link href="/updates" className="subscription-flow-primary">
@@ -209,8 +208,8 @@ export default function SubscriptionFlow({
 
       <p className="subscription-flow-description">
         {isVerify
-          ? "Confirm your email address to receive TPAV Class Action stories, announcements and important updates."
-          : "Please confirm that you would like to stop receiving TPAV Class Action update emails."}
+          ? "Confirm your email address to receive Class Action Against TPAV stories, announcements and important updates."
+          : "Please confirm that you would like to stop receiving Class Action Against TPAV update emails."}
       </p>
 
       <button
@@ -225,7 +224,7 @@ export default function SubscriptionFlow({
           const confirmed = await confirm(
             isVerify ? "Confirm subscription?" : "Unsubscribe?",
             isVerify
-              ? "You agree to receive TPAV Class Action updates."
+              ? "You agree to receive Class Action Against TPAV updates."
               : "You will stop receiving email updates.",
           );
 
@@ -301,7 +300,7 @@ export default function SubscriptionFlow({
 
           <p>
             {isVerify
-              ? "Confirming your email only subscribes you to TPAV Class Action updates."
+              ? "Confirming your email only subscribes you to Class Action Against TPAV updates."
               : "You can return to the website at any time."}
           </p>
         </div>

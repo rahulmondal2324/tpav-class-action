@@ -26,7 +26,7 @@ export default function InnerPage({
             <div className={styles.eyebrow}>
               <span className={styles.eyebrowLine}></span>
 
-              <span>TPAV CLASS ACTION</span>
+              <span>Class Action Against TPAV</span>
 
               <span className={styles.eyebrowLine}></span>
             </div>

@@ -77,7 +77,7 @@ export function emailFrame(
   const unsubscribeText = unsubscribeUrl
     ? `
       You are receiving this email because you requested
-      TPAV Class Action updates.
+      Class Action Against TPAV updates.
       <a
         href="${escapeHtml(unsubscribeUrl)}"
         style="color:#315d89;text-decoration:underline;"
@@ -202,7 +202,7 @@ export function emailFrame(
                         letter-spacing:2px;
                       "
                     >
-                      TPAV CLASS ACTION
+                      CLASS ACTION AGAINST TPAV
                     </div>
 
                     <h1
@@ -296,7 +296,7 @@ export function emailFrame(
                       "
                     >
                       © ${new Date().getFullYear()}
-                      TPAV Class Action
+                      Class Action Against TPAV
                     </p>
 
                   </td>

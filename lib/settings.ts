@@ -2,7 +2,7 @@ import "server-only";
 import { cache } from "react";
 import { prisma } from "./prisma";
 export const defaults: Record<string, string> = {
-  siteTitle: "TPAV Class Action",
+  siteTitle: "Class Action Against TPAV",
   contactEmail: "",
   authorStory: "",
   privacy: "",

@@ -17,7 +17,7 @@ export function PublicHeader() {
             <div className="logo">
               <Link href="/" aria-label="TPAV Class Action home">
                 <img
-                  src="/assets/images/logo.png"
+                  src="/assets/images/logo2.png"
                   className="img-fluid"
                   alt="TPAV Class Action"
                   width={170}
