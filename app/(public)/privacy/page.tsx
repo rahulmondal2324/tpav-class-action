@@ -517,7 +517,7 @@ export default function Page() {
                   <span>→</span>
                 </Link>
 
-                <Link href="/terms-of-service" className={styles.secondaryLink}>
+                <Link href="/terms" className={styles.secondaryLink}>
                   View Terms of Service
                 </Link>
               </div>

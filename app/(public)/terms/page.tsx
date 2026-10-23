@@ -480,7 +480,7 @@ export default function Page() {
                   accordance with our Privacy Policy.
                 </p>
 
-                <Link href="/privacy-policy" className={styles.inlineLink}>
+                <Link href="/privacy" className={styles.inlineLink}>
                   Read our Privacy Policy
                   <span>→</span>
                 </Link>
