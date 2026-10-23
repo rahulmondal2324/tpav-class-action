@@ -4,16 +4,6 @@ import sanitizeHtml from "sanitize-html";
 export const emailSchema = z.string().trim().toLowerCase().email().max(254);
 export const subscribeSchema = z.object({
   firstName: z.string().trim().min(1, "Enter your first name.").max(50),
-  lastName: z.string().trim().min(1, "Enter your last name.").max(50),
-  phoneNumber: z
-    .string()
-    .trim()
-    .max(30)
-    .regex(/^\+?[0-9 ()-]+$/, "Enter a valid phone number.")
-    .refine((v) => {
-      const length = v.replace(/\D/g, "").length;
-      return length >= 7 && length <= 15;
-    }, "Enter a phone number with 7–15 digits."),
   email: emailSchema,
   consent: z.literal(true),
   website: z.string().max(0).optional(),

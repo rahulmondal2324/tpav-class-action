@@ -3,8 +3,6 @@ import { z } from "zod";
 import { Prisma } from "@/app/generated/prisma/client";
 const profileSchema = z.object({
   firstName: z.string().max(50),
-  lastName: z.string().max(50),
-  phoneNumber: z.string().max(30),
   consentAt: z.string().datetime(),
 });
 type Profile = z.infer<typeof profileSchema>;
@@ -62,8 +60,6 @@ export async function requestVerification(
         ...(profile
           ? {
               firstName: profile.firstName,
-              lastName: profile.lastName,
-              phoneNumber: profile.phoneNumber,
               consentAt: new Date(profile.consentAt),
               pendingProfile: profile,
             }
@@ -112,9 +108,7 @@ export async function verifySubscription(raw: string) {
       ...(profile.success
         ? {
             firstName: profile.data.firstName,
-            lastName: profile.data.lastName,
-            phoneNumber: profile.data.phoneNumber,
-            name: `${profile.data.firstName} ${profile.data.lastName}`,
+            name: profile.data.firstName,
             consentAt: new Date(profile.data.consentAt),
           }
         : {}),

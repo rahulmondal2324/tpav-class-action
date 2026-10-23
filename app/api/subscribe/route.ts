@@ -8,12 +8,10 @@ export async function POST(request: Request) {
     const data = subscribeSchema.parse(await jsonBody(request));
     await rateLimit("subscribe-ip:" + requestIp(request), 20, 3600);
     const result = await requestVerification(
-      data.firstName + " " + data.lastName,
+      data.firstName,
       data.email,
       {
         firstName: data.firstName,
-        lastName: data.lastName,
-        phoneNumber: data.phoneNumber,
         consentAt: new Date().toISOString(),
       },
     );

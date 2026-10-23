@@ -42,8 +42,8 @@ export default async function Page({
       select: {
         id: true,
         name: true,
+        firstName: true,
         email: true,
-        phoneNumber: true,
         emailVerified: true,
         subscribed: true,
         unsubscribedAt: true,
@@ -92,9 +92,8 @@ export default async function Page({
             {rows.map((s) => (
               <tr key={s.id}>
                 <td>
-                  <strong>{s.name}</strong>
+                  <strong>{s.firstName || s.name}</strong>
                   <small>{s.email}</small>
-                  {s.phoneNumber && <small>{s.phoneNumber}</small>}
                 </td>
                 <td>
                   <span

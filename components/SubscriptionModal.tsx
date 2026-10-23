@@ -139,8 +139,6 @@ export default function SubscriptionModal({
               try {
                 const result = await api("/api/subscribe", {
                   firstName: data.get("firstName"),
-                  lastName: data.get("lastName"),
-                  phoneNumber: data.get("phoneNumber"),
                   email: data.get("email"),
                   consent: data.get("consent") === "on",
                   website: data.get("website"),
@@ -163,40 +161,15 @@ export default function SubscriptionModal({
             <fieldset disabled={busy} className="join-grid">
               <legend className="sr-only">Your contact details</legend>
 
-              <label>
-                First name
+              <label className="join-full">
+                Name
                 <input
                   name="firstName"
                   autoComplete="given-name"
                   required
                   maxLength={50}
-                  placeholder="First name"
+                  placeholder="Name"
                 />
-              </label>
-
-              <label>
-                Last name
-                <input
-                  name="lastName"
-                  autoComplete="family-name"
-                  required
-                  maxLength={50}
-                  placeholder="Last name"
-                />
-              </label>
-
-              <label className="join-full">
-                Phone number
-                <input
-                  name="phoneNumber"
-                  type="tel"
-                  autoComplete="tel"
-                  inputMode="tel"
-                  required
-                  maxLength={30}
-                  placeholder="e.g. +61 400 123 456"
-                />
-                <small>Include your country code if outside Australia.</small>
               </label>
 
               <label className="join-full">
