@@ -46,7 +46,7 @@ export default function AdminFrame({
       <aside className={`admin-nav ${open ? "open" : ""}`}>
         <Link href="/admin/dashboard" className="admin-brand">
           <img
-            src="/assets/images/logo.png"
+            src="/assets/images/logo2.png"
             alt="TPAV Class Action"
             width={165}
           />
